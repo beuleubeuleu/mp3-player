@@ -136,6 +136,10 @@ button:active {
     margin: 1rem 0 1rem 0;
 }
 
+.card__time--representation {
+    width: 100%;
+}
+
 .card__time--representation > * {
     border-radius: 50px;
 }
@@ -148,7 +152,6 @@ button:active {
 .time__representation--time-elapsed {
     background: var(--gradient-right);
     height: 4px;
-    width: 50%;
     position: absolute;
 }
 
