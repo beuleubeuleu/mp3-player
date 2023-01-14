@@ -1,0 +1,180 @@
+/*--------------------------------------
+              CSS-RESET
+--------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/*--------------------------------------
+              SET-UP
+--------------------------------------*/
+
+:root {
+    --primary-font-color: #545B5C;
+    --secondary-font-color: #767475;
+    --total-time: #B1B1B1;
+    --gradient-up: linear-gradient(#D76E67, #53371D);
+    --gradient-right: linear-gradient(to right, #D76E67, #53371D);
+    --card-bg: #FFFFFF
+}
+
+html {
+    height: 100vh;
+    font-size: clamp(50%, 24px, 100%);
+    font-family: "Noto Sans", sans-serif;
+
+    background: var(--gradient-up);
+}
+
+body {
+    height: 100%;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+button:active {
+    transform: translate(1px, 1px);
+    filter: saturate(150%);
+}                                /*--------------------------------------
+              HELPER-CLASSES
+--------------------------------------*/
+
+
+.flex {
+    display: flex;
+}
+
+.box-shadow {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/*--------------------------------------
+              CARD
+--------------------------------------*/
+
+
+.card {
+    background: var(--card-bg);
+
+    width: 90%;
+    height: 80%;
+    padding: 1em;
+    border-radius: 15px;
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__aside {
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card__option {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__option > * {
+    color: var(--primary-font-color);
+}
+
+.card__option--title {
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+.card__figure {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--primary-font-color);
+}
+
+.card__song-image {
+    background: url("images/flower-dance--cover.jpeg") center;
+    background-size: cover;
+
+    min-width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 15px;
+}
+
+.card__song-title {
+    margin-top: 1rem;
+}
+
+.card__song-album {
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin-top: 0.5em;
+}
+
+.card__interactive {
+    margin: 1rem 0 1rem 0;
+}
+
+.card__time--representation > * {
+    border-radius: 50px;
+}
+
+.time__representation--total-time {
+    background: var(--total-time);
+    height: 4px;
+}
+
+.time__representation--time-elapsed {
+    background: var(--gradient-right);
+    height: 4px;
+    width: 50%;
+    position: absolute;
+}
+
+.card__time--minutes {
+    justify-content: space-between;
+
+    color: var(--primary-font-color);
+    font-size: 0.8rem;
+    font-weight: 100;
+
+    margin-top: 1em;
+}
+
+.card__button {
+    justify-content: space-between;
+    align-items: center;
+    color: #D76E67;
+
+    margin-top: 1em;
+}
+
+.card__button button {
+    font-size: 2rem;
+    text-shadow: 0 0 2px #53371D;
+}
+
+.card__button--pause {
+    display:none
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bba29545aa.js" crossorigin="anonymous"></script>
+    <title>music player</title>
+</head>
+<body>
+
+<div class="card box-shadow flex">
+
+    <div class="card__aside flex">
+
+
+        <div class="card__option flex">
+            <button class="card__option--minimize">
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <p class="card__option--title">Now Playing</p>
+            <button class="card__option--more-options">
+                <i class="fa-solid fa-ellipsis"></i>
+            </button>
+        </div>
+
+        <div class="card__figure flex">
+            <div class="card__song-image"></div>
+            <div class="card__song-title">Flower Dance</div>
+            <div class="card__song-album">DJ OKAWARI</div>
+        </div>
+
+
+    </div>
+
+    <div class="card__interactive">
+
+
+        <div class="card__time">
+
+            <div class="card__time--representation">
+                <div class="time__representation--time-elapsed"></div>
+                <div class="time__representation--total-time"></div>
+            </div>
+
+            <div class="card__time--minutes flex">
+                <p class="minutes-elapsed">0:00</p>
+                <p class="total-minutes"></p>
+
+            </div>
+
+        </div>
+
+        <div class="card__button flex">
+            <button class="card__button--replay-option">
+                <i class="fa-solid fa-repeat"></i>
+            </button>
+            <button class="card__button--prev">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+            <button class="card__button--play">
+                <i class="fa-solid fa-circle-play"></i>
+            </button>
+            <button class="card__button--pause">
+                <i class="fa-solid fa-circle-pause"></i>
+            </button>
+            <button class="card__button--next">
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+            <button class="card__button--check-playlist">
+                <i class="fa-solid fa-record-vinyl"></i>
+            </button>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
