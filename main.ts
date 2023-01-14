@@ -35,6 +35,15 @@ nextBtn.addEventListener("click", (): void => {
     console.log(endOfSong)
     flowerDanceAudio.currentTime = endOfSong
 })
+toggleLoopBtn.addEventListener("click", ():void => {
+    if (flowerDanceAudio.loop) {
+        toggleLoopBtn.style.filter = "saturate(0%)"
+        flowerDanceAudio.loop = false
+    } else {
+        toggleLoopBtn.style.filter = "saturate(100%)"
+        flowerDanceAudio.loop = true
+    }
+})
 
 flowerDanceAudio.addEventListener("timeupdate", (): void => {
     const timeElapsedInPercent: string = `${(flowerDanceAudio.currentTime / flowerDanceAudio.duration) * 100}%`
@@ -42,5 +51,9 @@ flowerDanceAudio.addEventListener("timeupdate", (): void => {
     timeElapsedMinutes.innerHTML = convertSecondsToMinutes(flowerDanceAudio.currentTime)
     console.log(timeElapsedVisual.style.width)
     timeElapsedVisual.style.width = timeElapsedInPercent
+    if(flowerDanceAudio.ended) {
+        pauseBtn.style.display = "none"
+        playBtn.style.display = "inline-block"
+    }
 })
 
