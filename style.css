@@ -49,8 +49,10 @@ button {
 button:active {
     transform: translate(1px, 1px);
     filter: saturate(150%);
-}                                /*--------------------------------------
-              HELPER-CLASSES
+}
+
+/*--------------------------------------
+HELPER-CLASSES
 --------------------------------------*/
 
 
@@ -71,7 +73,7 @@ button:active {
 .card {
     background: var(--card-bg);
 
-    width: 90%;
+    width: min(500px, 90%);
     height: 80%;
     padding: 1em;
     border-radius: 15px;
@@ -83,7 +85,6 @@ button:active {
     transform: translate(-50%, -50%);
 
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .card__aside {
@@ -138,6 +139,7 @@ button:active {
 
 .card__time--representation {
     width: 100%;
+    position: relative;
 }
 
 .card__time--representation > * {
@@ -179,5 +181,42 @@ button:active {
 }
 
 .card__button--pause {
-    display:none
+    display: none
+}
+
+.card__playlist {
+    flex-direction: column;
+    max-height: 0;
+    overflow: scroll;
+    transition: max-height 0.5s linear;
+}
+
+.open-playlist {
+    max-height: 150px;
+}
+
+.card__playlist-track {
+    border-top: 1px solid #333;
+    height: 50px;
+    color: #333;
+    padding: 2em 0;
+
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+
+    cursor: pointer;
+    transition: background-color 0.1s linear;
+}
+
+.card__playlist-track:hover {
+    background: #EEE;
+}
+.card__playlist-track:active {
+    transform: translate(0, 1px);
+}
+
+.card__playlist-cover {
+    height: inherit;
+    aspect-ratio: 1;
 }
